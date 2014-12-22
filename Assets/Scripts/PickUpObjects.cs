@@ -171,7 +171,8 @@ public class PickUpObjects : MonoBehaviour {
 			vida = vidas.NumVidas.ToString();//constrói a string d dando-lhe o valor "Vida" concatenado com o número de vidas restante
 
 
-			idade = PlayerPrefs.GetInt("IDADE");
+			//idade = PlayerPrefs.GetInt("IDADE");
+			idade = perfil.Idade.ToString();
 			sexo = perfil.Sexo.ToString();
 			anoEscolar = perfil.AnoEscolar.ToString();
 			data= perfil.Date;
