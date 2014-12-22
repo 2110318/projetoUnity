@@ -7,7 +7,7 @@ public class PerfilCsharp : MonoBehaviour {
 
 	private string path = @"Assets\Data.csv";
 	public static DateTime date = DateTime.Now;
-	private string idd;
+
 	public DateTime Date {
 		get {
 			return date;
