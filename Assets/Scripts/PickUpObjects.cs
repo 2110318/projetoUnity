@@ -171,28 +171,42 @@ public class PickUpObjects : MonoBehaviour {
 			vida = vidas.NumVidas.ToString();//constrói a string d dando-lhe o valor "Vida" concatenado com o número de vidas restante
 
 
-			idade = perfil.Idade.ToString();
+		//	idade = perfil.Idade.ToString();
 			/*sexo = perfil.Sexo.ToString();
 			anoEscolar = perfil.AnoEscolar.ToString();*/
 
-			if (File.Exists (path)) { //se o ficheiro existir
-				appendText = data.ToString() +", "+ idade + ", "+  itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", " ;
+			/*if (File.Exists (path)) { //se o ficheiro existir
+				appendText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", " ;
 				File.AppendAllText (path, appendText);
 				
 				
 			}
 			if (!File.Exists (path)) {
-				createText = data.ToString() +", "+ itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", ";
+				createText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", ";
 				File.WriteAllText (path, createText);
 				
 				
-			}
+			}*/
 			
 		}
 		if (contarBom == numeroItemsBons) {
 			//contagem= " Contagem="+ tempo_script.Contador;
 			//contagem = insistencias
-			File.AppendAllText (path, (nivel - 1) + ", " + pontos +", "+contagem+ ", ");
+
+			if (File.Exists (path)) { //se o ficheiro existir
+				appendText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem+ Environment.NewLine ;
+				File.AppendAllText (path, appendText);
+				
+				
+			}
+
+			if (!File.Exists (path)) {
+				createText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem ;
+				File.WriteAllText (path, createText);
+				
+				
+			}
+		//	File.AppendAllText (path, (nivel - 1) + ", " + pontos +", "+contagem+ ", ");
 			
 		}
 		
