@@ -186,7 +186,7 @@ public class PickUpObjects : MonoBehaviour {
 				File.WriteAllText (path, createText);
 				
 				
-			}*/
+			111}*/
 			
 		}
 		if (contarBom == numeroItemsBons) {
