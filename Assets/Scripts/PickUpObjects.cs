@@ -50,7 +50,7 @@ public class PickUpObjects : MonoBehaviour {
 	private string contarFinalBons;
 	private string contarFinalMaus;
 
-	public  DateTime data = DateTime.Now;
+	public  DateTime data;
 
 
 
@@ -171,9 +171,10 @@ public class PickUpObjects : MonoBehaviour {
 			vida = vidas.NumVidas.ToString();//constrói a string d dando-lhe o valor "Vida" concatenado com o número de vidas restante
 
 
-		//	idade = perfil.Idade.ToString();
-			/*sexo = perfil.Sexo.ToString();
-			anoEscolar = perfil.AnoEscolar.ToString();*/
+			idade = PlayerPrefs.GetInt("IDADE");
+			sexo = perfil.Sexo.ToString();
+			anoEscolar = perfil.AnoEscolar.ToString();
+			data= perfil.Date;
 
 			/*if (File.Exists (path)) { //se o ficheiro existir
 				appendText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", " ;
@@ -194,14 +195,14 @@ public class PickUpObjects : MonoBehaviour {
 			//contagem = insistencias
 
 			if (File.Exists (path)) { //se o ficheiro existir
-				appendText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem+ Environment.NewLine ;
+				appendText = data+ ", "+ idade + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem+ Environment.NewLine ;
 				File.AppendAllText (path, appendText);
 				
 				
 			}
 
 			if (!File.Exists (path)) {
-				createText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem ;
+				createText = data+ ", "+idade + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem ;
 				File.WriteAllText (path, createText);
 				
 				

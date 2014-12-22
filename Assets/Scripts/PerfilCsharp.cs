@@ -54,14 +54,18 @@ public class PerfilCsharp : MonoBehaviour {
 
 	}
 
+	public void saveIdade(){
+		PlayerPrefs.GetInt ("IDADE", idade);
+	}
+
 	public void SeisAnos(){
 		idade=6;
-		if (!File.Exists (path)) {
+		/*if (!File.Exists (path)) {
 			File.WriteAllText (path, date.ToString()+ ", "+  idade.ToString()+ ", " );		
 		}
 		else if (File.Exists (path)) {			
 			File.AppendAllText (path, date.ToString()+ ", "+ idade.ToString()+", " );				
-		}
+		}*/
 
 	}
 
