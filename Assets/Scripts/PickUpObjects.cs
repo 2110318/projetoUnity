@@ -15,7 +15,7 @@ public class PickUpObjects : MonoBehaviour {
 	public AudioClip somItemMau;
 	public AudioClip somAgua;
 
-	public PerfilCsharp perfil;
+	//public PerfilCsharp perfil;
 
 
 	public GUIText pontuacao;
@@ -34,9 +34,9 @@ public class PickUpObjects : MonoBehaviour {
 	private string vida = "";
 
 	//private string data = "";
-	private string idade = "";
-	private string anoEscolar = "";
-	private string sexo = "";
+	//private string idadeString = "";
+	private static string anoEscolar = "";
+	private static string sexo = "";
 
 	private int contagem;
 	
@@ -50,7 +50,9 @@ public class PickUpObjects : MonoBehaviour {
 	private string contarFinalBons;
 	private string contarFinalMaus;
 
-	public  DateTime data;
+	public static DateTime date = DateTime.Now;
+
+	public static int idade;
 
 
 
@@ -59,8 +61,8 @@ public class PickUpObjects : MonoBehaviour {
 	void Start(){
 		
 		OrganizarPontuacao();
-		if(nivel==0)
-			File.AppendAllText(path, "Novo Jogo" + ", ");
+		/*if(nivel==0)
+			File.AppendAllText(path, "Novo Jogo" + ", ");*/
 	}
 	
 	void Update(){
@@ -145,6 +147,187 @@ public class PickUpObjects : MonoBehaviour {
 		nivel = 0;
 		vidas.reiniciar();
 	}
+
+	public void Jogar(){
+		
+		Application.LoadLevel ("Interface_Texto");
+		
+	}
+	
+	/*public void saveIdade(){
+		PlayerPrefs.GetInt ("IDADE", idade);
+	}*/
+	
+	public void SeisAnos(){
+		idade=6;
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", "+  idade.ToString()+ ", " );		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, date.ToString()+ ", "+ idade.ToString()+", " );				
+		}*/
+		
+	}
+	
+	public void SeteAnos(){
+		idade = 7;
+	/*	if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", " + idade.ToString() + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, date.ToString()+ ", " + idade.ToString() + ", ");				
+		}*/
+	}
+	
+	public void OitoAnos(){
+		idade = 8;
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", " + idade.ToString() + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, date.ToString()+ ", " + idade.ToString() + ", ");				
+		}*/
+	}
+	
+	public void NoveAnos(){
+		idade = 9;
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", "+ idade.ToString() + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, date.ToString()+ ", "+ idade.ToString() + ", ");				
+		}*/
+	}
+	
+	public void DezAnos(){
+		idade = 10;
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", "+idade.ToString() + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, date.ToString()+ ", "+ idade.ToString() + ", ");				
+		}*/
+	}
+	
+	public void OnzeAnos(){
+		idade = 11;
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", "+ idade.ToString() + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path,date.ToString()+ ", "+  idade.ToString() + ", ");				
+		}*/
+	}
+	
+	public void DozeAnos(){
+		idade = 12;
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, date.ToString()+ ", "+ idade.ToString() + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path,date.ToString()+ ", "+ idade.ToString() + ", ");				
+		}*/
+	}
+	
+	public void SexoFeminino(){
+		sexo = "Feminino";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, sexo + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, sexo + ", ");				
+		}*/
+	}
+	
+	public void SexoMasculino(){
+		sexo = "Masculino";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, sexo + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, sexo + ", ");				
+		}*/
+	}
+	
+	public void PrePrimaria(){
+		anoEscolar = "Pre-Primaria";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void PrimeiroAno(){
+		anoEscolar = "Primeiro Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void SegundoAno(){
+		anoEscolar = "Segundo Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void TerceiroAno(){
+		anoEscolar = "Terceiro Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void QuartoAno(){
+		anoEscolar = "Quarto Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void QuintoAno(){
+		anoEscolar = "Quinto Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void SextoAno(){
+		anoEscolar = "Sexto Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
+	
+	public void SetimoAno(){
+		anoEscolar = "Setimo Ano";
+		/*if (!File.Exists (path)) {
+			File.WriteAllText (path, anoEscolar + ", ");		
+		}
+		else if (File.Exists (path)) {			
+			File.AppendAllText (path, anoEscolar + ", ");				
+		}*/
+	}
 	
 	private void guardarFicheiro(Collider other) 
 	{
@@ -172,10 +355,10 @@ public class PickUpObjects : MonoBehaviour {
 
 
 			//idade = PlayerPrefs.GetInt("IDADE");
-			idade = perfil.Idade.ToString();
+		/*	idade = perfil.Idade.ToString();
 			sexo = perfil.Sexo.ToString();
 			anoEscolar = perfil.AnoEscolar.ToString();
-			data= perfil.Date;
+			data= perfil.Date;*/
 
 			/*if (File.Exists (path)) { //se o ficheiro existir
 				appendText = itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", " ;
@@ -188,22 +371,22 @@ public class PickUpObjects : MonoBehaviour {
 				File.WriteAllText (path, createText);
 				
 				
-			111}*/
+			}*/
 			
 		}
-		if (contarBom == numeroItemsBons) {
+		if (contarBom == numeroItemsBons && nivel <=5 ) {
 			//contagem= " Contagem="+ tempo_script.Contador;
 			//contagem = insistencias
 
 			if (File.Exists (path)) { //se o ficheiro existir
-				appendText = data+ ", "+ idade + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem+ Environment.NewLine ;
+				appendText = date.ToString()+ ", "+idade.ToString() + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel-1) + ", " + pontos +", "+contagem+ ", "+"Nao" + Environment.NewLine ;
 				File.AppendAllText (path, appendText);
 				
 				
 			}
 
 			if (!File.Exists (path)) {
-				createText = data+ ", "+idade + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel - 1) + ", " + pontos +", "+contagem ;
+				createText = date.ToString()+ ", "+idade.ToString() + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel-1) + ", " + pontos +", "+contagem +  ", "+"Nao" + Environment.NewLine;
 				File.WriteAllText (path, createText);
 				
 				
@@ -211,13 +394,13 @@ public class PickUpObjects : MonoBehaviour {
 		//	File.AppendAllText (path, (nivel - 1) + ", " + pontos +", "+contagem+ ", ");
 			
 		}
-		
-		if (nivel > 5) {
-			File.AppendAllText (path, "Fim de Jogo " + Environment.NewLine);
-		}
-		
+
+		if (contarBom == numeroItemsBons && nivel==6) {
+						
+			appendText = date.ToString()+ ", "+idade.ToString() + ", "+ sexo + ", " + anoEscolar + ", " + itemMau + ", " + itemBom + ", " + tempo + ", " + vida + ", "+(nivel-1) + ", " + pontos +", "+contagem+", "  + "Sim" +Environment.NewLine ;
+			File.AppendAllText (path, appendText);
 	}
-	
+	}
 	
 }
 
