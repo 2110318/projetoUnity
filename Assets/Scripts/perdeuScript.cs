@@ -3,7 +3,7 @@ using System.Collections;
 
 public class perdeuScript : MonoBehaviour {
 
-    public PickUpObjects player;
+    public PickUpItems player;
    
     // Use this for initialization
 	void Start () {        

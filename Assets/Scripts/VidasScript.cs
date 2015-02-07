@@ -47,7 +47,7 @@ public class VidasScript : MonoBehaviour {
             vida_2.gameObject.SetActive(false);
         if (numVidas < 1)
         {   
-			File.AppendAllText(path, "Perdeu "+Environment.NewLine);
+			//File.AppendAllText(path, "Perdeu "+Environment.NewLine);
             Application.LoadLevel("Perdeu");
         }
         

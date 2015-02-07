@@ -53,7 +53,7 @@
      <Compile Include="Assets\Scripts\Mover.cs" />
      <Compile Include="Assets\Scripts\MovingBird.cs" />
      <Compile Include="Assets\Scripts\PerfilCsharp.cs" />
-     <Compile Include="Assets\Scripts\PickUpObjects.cs" />
+     <Compile Include="Assets\Scripts\PickUpItems.cs" />
      <Compile Include="Assets\Scripts\Pontuacao.cs" />
      <Compile Include="Assets\Scripts\VidasScript.cs" />
      <Compile Include="Assets\Scripts\abanarBarcoScript.cs" />
